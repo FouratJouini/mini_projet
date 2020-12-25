@@ -1,0 +1,26 @@
+<div class="col-md-8 offset-md-2">
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Id:</th>
+                <th>Nom:</th>
+                <th>Age:</th>
+                <th>Date Inscription:</th>
+                <th colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let etudiant of etudiants">
+                <td>{{etudiant.idEtu}}</td>
+                <td>{{etudiant.nomEtu}}</td>
+                <td>{{etudiant.ageEtu}}</td>
+                <td>{{etudiant.dateInsEtu}}</td>
+                <td colspan="2">
+                    <button (click) ="updateEtudiant(etudiant.idEtu)" class="btn btn-warning">Update</button>
+                    &nbsp;
+                    <button (click) = "deleteEtudiant(etudiant.idEtu)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

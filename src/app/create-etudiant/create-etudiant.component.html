@@ -1,0 +1,20 @@
+<div class="col-md-8 offset-md-2">
+    <h3 class="text-center">Ajouter un étudiant!</h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label>Nom Etudiant</label>
+            <input type="text" class="form-control" id="nomEtu" [(ngModel)] = "etudiant.nomEtu" name="nomEtu">
+        </div>
+        <div class="form-group">
+            <label>Age Etudiant</label>
+            <input type="number" class="form-control" id="ageEtu" [(ngModel)] = "etudiant.ageEtu" name="ageEtu">
+        </div>
+        <div class="form-group">
+            <label>Date Inscription</label>
+            <input type="text" class="form-control" id="dateInsEtu" [(ngModel)] = "etudiant.dateInsEtu" name="dateInsEtu">
+        </div>
+        <div class="text-center">
+            <button class ="btn btn-success btn-lg btn-block" type="submit">Ajouter!</button>
+        </div>
+    </form>
+</div>
